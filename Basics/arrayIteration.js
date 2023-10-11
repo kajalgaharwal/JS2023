@@ -75,4 +75,41 @@ const obj = {
 // })
 
 
+//filter
 
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+// const myNums = numbers.filter( (num)=> {
+//     return num>4;
+// } )
+// console.log(myNums);
+
+//map chaining
+
+
+// const newNum = number.map( (num)=> num*10 ).map((num)=> num+1).filter((num)=> num>40);
+// console.log(newNum);
+
+//reduce
+const newNum = numbers.reduce((acc,curr)=>acc+curr,0);
+console.log(newNum);
+
+const courseObj = [
+    {
+        courseName:'js',
+        fee: 2999
+    },
+    {
+        courseName:'cpp',
+        fee: 1999
+    },
+    {
+        courseName:'java',
+        fee: 3999
+    },
+    {
+        courseName:'python',
+        fee: 4999
+    }
+]
+const totalFee = courseObj.reduce((acc,item)=> acc + item.fee ,0);
+console.log(totalFee);
