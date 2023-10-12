@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>js</li>
+    </ul>
+</body>
+<script>
+function addLanguage(langName){
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`;
+    document.querySelector('.language').appendChild(li);
+}
+addLanguage('java');
+
+function languageName(language){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(language));
+    document.querySelector('.language').append(li);
+}
+languageName('CPP');
+
+//EDIT
+
+
+const li = document.querySelector('li:nth-child(2)');
+const newLi = document.createElement('li');
+newLi.textContent = 'Python';
+li.replaceWith(newLi);
+
+//REMOVE
+const lastLang = document.querySelector('li:last-child');
+lastLang.remove();
+
+</script>
+</html>
