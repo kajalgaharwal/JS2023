@@ -29,7 +29,7 @@ if(playGame){
     }
     else{
         prevGuess.push(guess);
-        if(numGuess ===11){
+        if(numGuess ===10){
             displayGuess(guess)
             displayMsg(`GAME OVER !! Random number was ${randomNumber}`);
             endGame();
@@ -46,11 +46,9 @@ if(playGame){
     }
     else if(guess < randomNumber){
         displayMsg(`Your guessed number is low.`);
-        endGame();
     }
     else if(guess > randomNumber){
         displayMsg(`Your guessed number is high.`);
-        endGame();
     }
 
  }
@@ -78,6 +76,7 @@ if(playGame){
     const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click', function (e) {
       randomNumber = parseInt(Math.random() * 100 + 1);
+      console.log(randomNumber);
       prevGuess = [];
       numGuess = 1;
       guessSlot.innerHTML = '';
